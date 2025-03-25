@@ -11,6 +11,10 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+    const ROLE_CLIENTE = 'cliente';
+    const ROLE_FUNCIONARIO = 'funcionario';
+    const ROLE_ADMINISTRADOR = 'administrador';
+
     /**
      * The attributes that are mass assignable.
      *
@@ -20,6 +24,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role'
     ];
 
     /**
@@ -43,5 +48,20 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function isCliente(){
+        return $this->role == self::ROLE_CLIENTE;
+    }
+    public function isFuncionario(){
+        return $this->role == self::ROLE_FUNCIONARIO;
+    }
+    public function isAdministrador(){
+        return $this->role == self::ROLE_ADMINISTRADOR;
+    }
+
+
+    public function Cliente()
+    {
+        return $this->hasOne(Cliente::class);
     }
 }

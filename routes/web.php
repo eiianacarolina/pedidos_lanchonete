@@ -1,7 +1,6 @@
 <?php
 
+use App\Livewire\Cliente\Cadastro;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/cliente', Cadastro::class)->name('cliente.create');
