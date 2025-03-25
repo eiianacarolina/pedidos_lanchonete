@@ -3,6 +3,7 @@
 namespace App\Livewire\Cliente;
 
 use App\Models\Cliente;
+use App\Models\Funcionario;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
