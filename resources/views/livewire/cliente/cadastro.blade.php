@@ -64,7 +64,7 @@
                             <div class="mb-3">
                                 <label for="cpf" style="color: #fff2c0">CPF</label>
                                 <input type="text" name="cpf" id="cpf" class="form-control"
-                                    placeholder="****" wire:model.defer="cpf" minlength="11" required>
+                                    placeholder="***********" wire:model.defer="cpf" minlength="11" required>
 
                             <div class="mb-3">
                                     <label for="email" style="color: #fff2c0">Email</label>
